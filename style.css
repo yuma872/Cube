@@ -1,0 +1,228 @@
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #252525;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+#wrapper {
+    padding-top: 7%;
+}
+
+.viewport {
+    -webkit-perspective: 2000px;
+    -moz-perspective: 2000px;
+    -ms-perspective: 2000px;
+    -o-perspective: 2000px;
+    perspective: 2000px;
+    -webkit-perspective-origin: 50% 600px;
+    -moz-perspective-origin: 50% 600px;
+    -ms-perspective-origin: 50% 600px;
+    -o-perspective-origin: 50% 600px;
+    perspective-origin: 50% 600px;
+    -webkit-transform: scale(0.8, 0.8);
+    -moz-transform: scale(0.8, 0.8);
+    -ms-transform: scale(0.8, 0.8);
+    -o-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+    -webkit-box-reflect: below 170px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent), to(rgba(250, 250, 250, 0.1)));
+}
+
+.cube {
+    position: relative;
+    margin: 0 auto;
+    height: 600px;
+    width: 600px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateX(136deg) rotateY(1122deg);
+    -moz-transform: rotateX(136deg) rotateY(1122deg);
+    -ms-transform: rotateX(136deg) rotateY(1122deg);
+    -o-transform: rotateX(136deg) rotateY(1122deg);
+    transform: rotateX(136deg) rotateY(1122deg);
+}
+
+.cube>div {
+    box-shadow: 4px 4px 43px 0px rgba(255, 145, 248, 0.534);
+    overflow: hidden;
+    position: absolute;
+    background-color: rgb(41, 41, 41);
+    border: medium solid pink;
+    opacity: 1;
+    height: 600px;
+    width: 600px;
+    -webkit-touch-callout: none;
+    -moz-touch-callout: none;
+    -ms-touch-callout: none;
+    -o-touch-callout: none;
+    touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.cube>div>div.cube-image {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
+    color: #fcfcfc;
+    -webkit-transition: color 600ms;
+    -moz-transition: color 600ms;
+    -ms-transition: color 600ms;
+    -o-transition: color 600ms;
+    transition: color 600ms;
+}
+
+.cube>div>div.cube-image.active {
+    color: pink;
+}
+
+.cube>div:hover {
+    cursor: pointer;
+}
+
+.cube>div:active {
+    cursor: pointer;
+}
+
+.cube>div:first-child {
+    -webkit-transform: rotateX(90deg) translateZ();
+    -moz-transform: rotateX(90deg) translateZ(300px);
+    -ms-transform: rotateX(90deg) translateZ(300px);
+    -o-transform: rotateX(90deg) translateZ(300px);
+    transform: rotateX(90deg) translateZ(300px);
+    outline: 1px solid transparent;
+}
+
+.cube>div:nth-child(2) {
+    -webkit-transform: translateZ(300px);
+    -moz-transform: translateZ(300px);
+    -ms-transform: translateZ(300px);
+    -o-transform: translateZ(300px);
+    transform: translateZ(300px);
+    outline: 1px solid transparent;
+}
+
+.cube>div:nth-child(3) {
+    -webkit-transform: rotateY(90deg) translateZ(300px);
+    -moz-transform: rotateY(90deg) translateZ(300px);
+    -ms-transform: rotateY(90deg) translateZ(300px);
+    -o-transform: rotateY(90deg) translateZ(300px);
+    transform: rotateY(90deg) translateZ(300px);
+    outline: 1px solid transparent;
+}
+
+.cube>div:nth-child(4) {
+    -webkit-transform: rotateY(180deg) translateZ(300px);
+    -moz-transform: rotateY(180deg) translateZ(300px);
+    -ms-transform: rotateY(180deg) translateZ(300px);
+    -o-transform: rotateY(180deg) translateZ(300px);
+    transform: rotateY(180deg) translateZ(300px);
+    outline: 1px solid transparent;
+}
+
+.cube>div:nth-child(5) {
+    -webkit-transform: rotateY(-90deg) translateZ(300px);
+    -moz-transform: rotateY(-90deg) translateZ(300px);
+    -ms-transform: rotateY(-90deg) translateZ(300px);
+    -o-transform: rotateY(-90deg) translateZ(300px);
+    transform: rotateY(-90deg) translateZ(300px);
+    outline: 1px solid transparent;
+}
+
+.cube>div:nth-child(6) {
+    -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(300px);
+    -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(300px);
+    -ms-transform: rotateX(-90deg) rotate(180deg) translateZ(300px);
+    -o-transform: rotateX(-90deg) rotate(180deg) translateZ(300px);
+    transform: rotateX(-90deg) rotate(180deg) translateZ(300px);
+    outline: 1px solid transparent;
+}
+
+object {
+    opacity: 0.5;
+}
+
+object:hover {
+    opacity: 1;
+}
+
+@media (max-width: 640px) {
+    .viewport {
+        -webkit-transform: scale(0.6, 0.6);
+        -moz-transform: scale(0.6, 0.6);
+        -ms-transform: scale(0.6, 0.6);
+        -o-transform: scale(0.6, 0.6);
+        transform: scale(0.6, 0.6);
+    }
+}
+
+header {
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    border: medium solid white;
+    width: 250px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+nav ul li:hover {
+    border-color: pink;
+}
+
+nav ul li a {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    color: pink;
+}
+
+.container {
+  color: white;
+  text-align: center;
+  margin: 10px 400px;
+}
+
+.container p {
+  font-size: 25px;
+}
